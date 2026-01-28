@@ -1,100 +1,56 @@
 package lab1;
 
-import java.util.ArrayList;
-
-/*
- * This class exercises functions and decision statements
- */
 public class Problem5 {
-    public static void getAverage(ArrayList<Integer> numberList) {
-        if (numberList == null || numberList.isEmpty()) {
-            System.out.println("List is empty");
-        }//nothing there
 
-        int total = 0;
-        for (int num : numberList) {
-            total += num;
-        }// if there is numbers, add them all up
+	public static int getMiddle(int[] values) {
+		return values[values.length / 2];
+	}
 
-        System.out.println(total / numberList.size());// make an average by dividing the amount there is
-    }
-    public static void getMiddle(ArrayList<Integer> numberList) {
-        if (numberList == null || numberList.isEmpty()) {
-            System.out.println("List is empty - no middle value");
-            return;
-            //empty list, nothing to print
-        }
+	public static double getAverage(int[] values) {
+		int sum = 0;
+		for (int value : values) {
+			sum += value;
+		}
+		return (double) sum / values.length;
+	}
 
-        int size = numberList.size();
-        int mid = size / 2;
+	public static int getNegativeTotal(int[] values) {
+		int total = 0;
+		for (int value : values) {
+			if (value < 0) {
+				total += value;
+			}
+		}
+		return total;
+	}
 
-        if (size % 2 == 1) {
-            System.out.println("Middle value: " + numberList.get(mid));//if its an odd number
-        } else {
-            System.out.println("Middle values: " + numberList.get(mid - 1) + " and " + numberList.get(mid));// if its an even number
+	public static boolean isMoreNegative(int[] values) {
+		int negatives = 0;
+		int positives = 0;
 
-        }
-    }
-    public static void getNegativeTotal(ArrayList<Integer> numberList) {
-        if (numberList == null || numberList.isEmpty()) {
-            System.out.println("List is empty - no negative total");
-            return;
-            //empty list, nothing to print
-        }               
-        int negativeTotal = 0;
-        for (int num : numberList) {
-            if (num < 0) {
-                negativeTotal += num;
-            }
-        }
-        System.out.println("Total of negative numbers: " + negativeTotal);
-    }
-    public static void isMoreNegative(ArrayList<Integer> numberList) {
-        if (numberList == null || numberList.isEmpty()) {
-            System.out.println("List is empty - cannot compare negatives and positives");
-            return;
-            //empty list, nothing to print
-        }               
-        int negativeCount = 0;
-        int positiveCount = 0;
-        for (int num : numberList) {//counting positives and negatives
-            if (num < 0) {
-                negativeCount++;
-            } else if (num > 0) {
-                positiveCount++;
-            }
-        }
-        if (negativeCount > positiveCount) {
-            System.out.println("More negative numbers");
-        } else if (positiveCount > negativeCount) {
-            System.out.println("More positive numbers");
-        } else {
-            System.out.println("Equal number of positive and negative numbers");
-        }
-    }   
+		for (int value : values) {
+			if (value < 0) {
+				negatives++;
+			} else if (value > 0) {
+				positives++;
+			}
+		}
 
-    public static void main(String[] args) {
-        ArrayList<Integer> numberList = new ArrayList<>();
-        //adds numbers to the newly created list
-        numberList.add(1);
-        numberList.add(2);
-        numberList.add(3);
-        numberList.add(4);
-        numberList.add(0);
-        numberList.add(-1);
-        numberList.add(-2);
-        numberList.add(-3);
-        numberList.add(-4);
-        getAverage(numberList);
-        getMiddle(numberList);
-        getNegativeTotal(numberList);
-        isMoreNegative(numberList); 
+		return negatives > positives;
+	}
 
+	public static void main(String[] args) {
+		int[] array1 = { 3, -2, 5, -7, 4 };
+		int[] array2 = { -1, -4, -6, 2, 9, 0 };
 
-    }
+		System.out.println("array1 middle: " + getMiddle(array1));
+		System.out.println("array1 average: " + getAverage(array1));
+		System.out.println("array1 negative total: " + getNegativeTotal(array1));
+		System.out.println("array1 more negatives than positives: " + isMoreNegative(array1));
 
-    
-
-    
-
+		System.out.println("array2 middle: " + getMiddle(array2));
+		System.out.println("array2 average: " + getAverage(array2));
+		System.out.println("array2 negative total: " + getNegativeTotal(array2));
+		System.out.println("array2 more negatives than positives: " + isMoreNegative(array2));
+	}
 }
