@@ -1,29 +1,33 @@
 package lab2;
 
 public class Person {
-    public String name;
-    public int income;
-    public int ssn;
-    public int creditScore;
+    private String name;
+    private double income;
+    private String ssn;
+    private int creditScore;
+ 
+    
+    // empty constructor
+    public Person() { }
 
-    public Person() {}
-
-    public Person(String name, int income, int ssn, int creditScore) {
+    // full constructor
+    public Person(String name, double income, String ssn, int creditScore) {
         this.name = name;
         this.income = income;
         this.ssn = ssn;
         this.creditScore = creditScore;
     }
 
+    // Getters
     public String getName() {
         return name;
     }
 
-    public int getIncome() {
+    public double getIncome() {
         return income;
     }
 
-    public int getSsn() {
+    public String getSsn() {
         return ssn;
     }
 
@@ -31,20 +35,20 @@ public class Person {
         return creditScore;
     }
 
+    // Setters
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setIncome(int income) {
+    public void setIncome(double income) {
         this.income = income;
     }
 
-    public void setSsn(int ssn) {
+    public void setSsn(String ssn) {
         this.ssn = ssn;
     }
 
     public void setCreditScore(int creditScore) {
         this.creditScore = creditScore;
     }
-
 }
