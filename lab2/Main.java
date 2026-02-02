@@ -18,15 +18,28 @@ public class Main {
 
         System.out.print("Credit Score: ");
         int creditScore = input.nextInt();
+        input.nextLine(); // clear newline
 
-        Person person1 = new Person(name, income, ssn, creditScore);
+        System.out.print("What loan would you like to apply for? (home/car): ");
+        String loanType = input.nextLine();
 
-        System.out.println(
-            person1.getName() + " " +
-            person1.getIncome() + " " +
-            person1.getSsn() + " " +
-            person1.getCreditScore()
-        );
-        Loan loan1 = new Loan();
+        Person person = new Person(name, income, ssn, creditScore);
+
+        if (loanType.equals("home")) {
+            if (Loan.homeLoan(person)) {
+                System.out.println("Congratulations! You have been approved for a home loan.");
+            } else {
+                System.out.println("Sorry, you do not qualify for a home loan.");
+            }
+        } else if (loanType.equals("car")) {
+            if (Loan.carLoan(person)) {
+                System.out.println("Congratulations! You have been approved for a car loan.");
+            } else {
+                System.out.println("Sorry, you do not qualify for a car loan.");
+            }
+        }
+
+        input.close();
     }
 }
+

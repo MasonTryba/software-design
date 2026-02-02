@@ -7,6 +7,5 @@ public class Loan {
 
     public static boolean carLoan(Person person) {
         return person.getIncome() >= 50000 && person.getCreditScore() >= 740;
-        
     }
 }
