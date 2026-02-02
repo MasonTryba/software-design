@@ -27,7 +27,6 @@ public class lab2 {
             person1.getSsn() + " " +
             person1.getCreditScore()
         );
-
-        input.close();
+        Loan loan1 = new Loan();
     }
 }
