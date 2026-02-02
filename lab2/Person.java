@@ -51,4 +51,7 @@ public class Person {
     public void setCreditScore(int creditScore) {
         this.creditScore = creditScore;
     }
+    public static void println(Person p) {
+        System.out.println(p.getName() + " " + p.getIncome() + " " + p.getSsn() + " " + p.getCreditScore());
+    }
 }
