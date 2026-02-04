@@ -1,8 +1,8 @@
 package lab3;
 
-public class condo extends lodging {
+public class Condo extends Lodging {
 
-    public condo(String mlsNumber, String address, String zip, String location,
+    public Condo(String mlsNumber, String address, String zip, String location,
                  int daysOnMarket, double price, int lotSize, String status,
                  double latitude, double longitude, int sqFeet, int yearBuilt,
                  int numBeds, int numBaths, double pricePerSqFoot,

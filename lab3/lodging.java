@@ -1,11 +1,11 @@
 package lab3;
-public class lodging extends Property {
+public class Lodging extends Property {
     private int sqFeet;
     private int yearBuilt;
     private int numBeds;
     private int numBaths;
     private double pricePerSqFoot;
-    private lodging(String mlsNumber, String address, String zip, String location,
+    private Lodging(String mlsNumber, String address, String zip, String location,
                    int daysOnMarket, double price, int lotSize, String status,
                    double latitude, double longitude, int sqFeet, int yearBuilt, int numBeds, int numBaths, double pricePerSqFoot) {
         super(mlsNumber, address, zip, location, daysOnMarket, price, lotSize, status, latitude, longitude);
