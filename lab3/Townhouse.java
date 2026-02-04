@@ -1,4 +1,4 @@
-package lab3;
+
 
 
 public class Townhouse extends Lodging {
