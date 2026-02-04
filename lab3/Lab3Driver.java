@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 public class Lab3Driver {
     public static void printProperties(String fileName, String propertyType) throws FileNotFoundException {
-        File file = new File(fileName);
+        File file = new File("lab3/" + fileName);
+        propertyType = '"' + propertyType + '"';
+
         Scanner scanner = new Scanner(file);
 
         while (scanner.hasNextLine()) {
@@ -14,7 +16,7 @@ public class Lab3Driver {
             String[] parts = line.split(",");
             String type = parts[1];
 
-            if (type.equalsIgnoreCase(propertyType)) {
+            if (type.equals(propertyType)) {
                 System.out.println(line);
             }
         }
@@ -29,10 +31,10 @@ public class Lab3Driver {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please enter the property data file name: ");
+        System.out.print("Please enter the property data file name: ");
         String fileName = scanner.nextLine();
 
-        System.out.println(
+        System.out.print(
                 "Please select a property type to filter\n" + 
                 "1. 'Single Family Residential'\n" +
                 "2. 'Multi-Family (2-4 Unit)'\n" +
@@ -42,6 +44,8 @@ public class Lab3Driver {
                 "Enter choice: "
             );
         String choice = scanner.nextLine();
+
+        System.out.println("Properties of specified type: ");
 
         try {
             printProperties(fileName, choice);
