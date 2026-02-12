@@ -1,6 +1,6 @@
 package lab4;
 
-public class RaceHorse extends Horse {
+public class RaceHorse extends Horse implements Raceable {
     private Horse dam;
     private Horse sire;
     private String registrationNumber;
@@ -13,7 +13,7 @@ public class RaceHorse extends Horse {
                      int yearFirstRaced, int numRaces, double winnings) {
 
         super(name, height, weight, yearBorn, color, breed);
-        
+
         this.dam = dam;
         this.sire = sire;
         this.registrationNumber = registrationNumber;
@@ -21,4 +21,13 @@ public class RaceHorse extends Horse {
         this.numRaces = numRaces;
         this.winnings = winnings;
     }
+
+    public double getWinnings() {
+        return winnings;
+    }
+
+    public double averageWinnings() {
+        return winnings/numRaces;
+    }
+
 }
