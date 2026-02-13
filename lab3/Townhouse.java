@@ -1,11 +1,8 @@
-
-
+package lab3;
 
 public class Townhouse extends Lodging {
     private double hoaFee;
-    /**
-     * Constructor that takes all attributes (Property + Lodging + Townhouse).
-     */
+
     public Townhouse(String mlsNumber, String address, String zip, String location,
                      int daysOnMarket, double price, String status,
                      double latitude, double longitude,
@@ -13,7 +10,7 @@ public class Townhouse extends Lodging {
                      double hoaFee) {
 
         super(mlsNumber, address, zip, location, daysOnMarket, price,
-                0, status, latitude, longitude,  // lotSize forced to 0
+                0, status, latitude, longitude,
                 sqFeet, yearBuilt, numBeds, numBaths, pricePerSqFoot);
 
         this.hoaFee = hoaFee;

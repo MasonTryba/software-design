@@ -6,10 +6,11 @@ public class Condo extends Lodging {
                  double latitude, double longitude, int sqFeet, int yearBuilt,
                  int numBeds, int numBaths, double pricePerSqFoot,
                  int floorLevel, double hoaFees) {
+
         super(mlsNumber, address, zip, location, daysOnMarket, price, lotSize,
               status, latitude, longitude, sqFeet, yearBuilt, numBeds,
               numBaths, pricePerSqFoot);
+
         this.setLotSize(0);
     }
-    
 }

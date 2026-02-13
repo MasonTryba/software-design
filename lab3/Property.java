@@ -1,7 +1,6 @@
 package lab3;
 
 public class Property {
-    // ===== Attributes (all private) =====
     private String mlsNumber;
     private String address;
     private String zip;
@@ -13,12 +12,10 @@ public class Property {
     private double latitude;
     private double longitude;
 
-
-
-
     public Property(String mlsNumber, String address, String zip, String location,
                     int daysOnMarket, double price, int lotSize, String status,
                     double latitude, double longitude) {
+
         this.mlsNumber = mlsNumber;
         this.address = address;
         this.zip = zip;
@@ -31,7 +28,6 @@ public class Property {
         this.longitude = longitude;
     }
 
-    // the Getters and Setters thats needed
     public String getMlsNumber() { return mlsNumber; }
     public void setMlsNumber(String mlsNumber) { this.mlsNumber = mlsNumber; }
 

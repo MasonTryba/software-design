@@ -1,12 +1,6 @@
 package lab3;
 
-/**
- * Represents a single-family residential home.
- */
 public class SingleFamily extends Lodging {
-    /**
-     * this will  takes all attributes (Property + Lodging) togther for SingleFamily.
-     */
     public SingleFamily(String mlsNumber, String address, String zip, String location,
                         int daysOnMarket, double price, int lotSize, String status,
                         double latitude, double longitude,
