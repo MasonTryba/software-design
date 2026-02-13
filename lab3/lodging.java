@@ -1,4 +1,5 @@
 package lab3;
+
 public class Lodging extends Property {
     private int sqFeet;
     private int yearBuilt;

@@ -1,7 +1,6 @@
 package lab3;
 
 public class Property {
-
     // ===== Attributes (all private) =====
     private String mlsNumber;
     private String address;

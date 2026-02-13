@@ -1,6 +1,6 @@
 package lab4;
 
-public class RaceHorse extends Horse implements Raceable {
+public class RaceHorse extends Horse implements Comparable<Raceable> {
     private Horse dam;
     private Horse sire;
     private String registrationNumber;
@@ -22,12 +22,15 @@ public class RaceHorse extends Horse implements Raceable {
         this.winnings = winnings;
     }
 
+    public int compareTo(Raceable r) {
+        return Double.compare(this.winnings, r.getWinnings());
+    }
+
     public double getWinnings() {
         return winnings;
     }
 
     public double averageWinnings() {
-        return winnings/numRaces;
+        return numRaces == 0 ? 0 : winnings / numRaces;
     }
-
 }

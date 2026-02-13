@@ -2,9 +2,7 @@
 
 
 public class Townhouse extends Lodging {
-
     private double hoaFee;
-
     /**
      * Constructor that takes all attributes (Property + Lodging + Townhouse).
      */

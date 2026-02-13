@@ -4,7 +4,6 @@ package lab3;
  * Represents a single-family residential home.
  */
 public class SingleFamily extends Lodging {
-
     /**
      * this will  takes all attributes (Property + Lodging) togther for SingleFamily.
      */
