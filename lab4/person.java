@@ -1,6 +1,6 @@
 package lab4;
 
-public class Person {
+public abstract class Person {
     private String name;
     private String country;
     private int yearBorn;
@@ -9,11 +9,6 @@ public class Person {
         this.name = name;
         this.country = country;
         this.yearBorn = yearBorn;
-    }
-    
-    public int getAge() {
-        int whatYearIsIt = 2026;
-        return whatYearIsIt - this.yearBorn;
     }
 
     public String getName() {return name;}
@@ -24,4 +19,9 @@ public class Person {
 
     public int getYearBorn() {return yearBorn;}
     public void setYearBorn(int yearBorn) {this.yearBorn = yearBorn;}
+
+    public int getAge() {
+        int whatYearIsIt = 2026;
+        return whatYearIsIt - this.yearBorn;
+    }
 }

@@ -22,14 +22,6 @@ public class RaceHorse extends Horse implements Raceable, Comparable<Raceable> {
         this.winnings = winnings;
     }
 
-    public int compareTo(Raceable r) {
-        return Double.compare(this.winnings, r.getWinnings());
-    }
-
-    public double averageWinnings() {
-        return numRaces == 0 ? 0 : winnings / numRaces;
-    }
-
     public Horse getDam() {return dam;}
     public void setDam(Horse dam) {this.dam = dam;}
 
@@ -47,4 +39,21 @@ public class RaceHorse extends Horse implements Raceable, Comparable<Raceable> {
 
     public double getWinnings() {return winnings;}
     public void setWinnings(double winnings) {this.winnings = winnings;}
+
+    public int compareTo(Raceable r) {
+        return Double.compare(this.winnings, r.getWinnings());
+    }
+
+    public double averageWinnings() {
+        return numRaces == 0 ? 0 : winnings / numRaces;
+    }
+
+    public String toString() {
+        return super.toString() + "\n Sire: " + sire.getName() +
+               "\n Dam: " + dam.getName() +
+               "\nRegistration Number: " + registrationNumber +
+               " Year First Raced: " + yearFirstRaced +
+               ", Num Races: " + numRaces +
+               ", Winnings: " + winnings;
+    }
 }
