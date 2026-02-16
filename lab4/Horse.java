@@ -16,4 +16,22 @@ public class Horse {
         this.color = color;
         this.breed = breed;
     }
+
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
+
+    public double getHeight() {return height;}
+    public void setHeight(double height) {this.height = height;}
+
+    public double getWeight() {return weight;}
+    public void setWeight(double weight) {this.weight = weight;}
+
+    public int getYearBorn() {return yearBorn;}
+    public void setYearBorn(int yearBorn) {this.yearBorn = yearBorn;}
+
+    public String getColor() {return color;}
+    public void setColor(String color) {this.color = color;}
+
+    public String getBreed() {return breed;}
+    public void setBreed(String breed) {this.breed = breed;}
 }

@@ -17,11 +17,12 @@ public class RaceCarDriver extends Person implements Comparable<Raceable> {
         return Double.compare(this.winnings, r.getWinnings());
     }
 
-    public int getWinnings() {
-        return winnings;
-    }
+    public int getWinnings() {return winnings;}
+    public void setWinnings(int winnings) {this.winnings = winnings;}
 
-    public double averageWinnings() {
-        return numRaces == 0 ? 0 : winnings / numRaces;
-    }
+    public int getStarts() {return starts;}
+    public void setStarts(int starts) {this.starts = starts;}
+
+    public int getWins() {return wins;}
+    public void setWins(int wins) {this.wins = wins;}
 }

@@ -15,4 +15,13 @@ public class Person {
         int whatYearIsIt = 2026;
         return whatYearIsIt - this.yearBorn;
     }
+
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
+
+    public String getCountry() {return country;}
+    public void setCountry(String country) {this.country = country;}
+
+    public int getYearBorn() {return yearBorn;}
+    public void setYearBorn(int yearBorn) {this.yearBorn = yearBorn;}
 }
