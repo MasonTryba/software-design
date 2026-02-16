@@ -1,6 +1,6 @@
 package lab4;
 
-public class RaceHorse extends Horse implements Comparable<Raceable> {
+public class RaceHorse extends Horse implements Raceable, Comparable<Raceable> {
     private Horse dam;
     private Horse sire;
     private String registrationNumber;

@@ -10,7 +10,7 @@ public class Person {
         this.country = country;
         this.yearBorn = yearBorn;
     }
-
+    
     public int getAge() {
         int whatYearIsIt = 2026;
         return whatYearIsIt - this.yearBorn;
