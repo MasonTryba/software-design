@@ -24,4 +24,7 @@ public class RaceCarDriver extends person implements Comparable<Raceable> {
     public double averageWinnings() {
         return numRaces == 0 ? 0 : winnings / numRaces;
     }
+    public int compareTo(Raceable r) {
+        return Double.compare(this.winnings, r.getWinnings());
+    }
 }
