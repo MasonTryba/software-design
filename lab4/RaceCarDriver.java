@@ -1,6 +1,6 @@
 package lab4;
 
-public class RaceCarDriver extends person implements Comparable<Raceable> {
+public class RaceCarDriver extends Person implements Raceable,Comparable<Raceable> {
     private int starts;
     private int winnings;
     private int wins;
@@ -12,19 +12,21 @@ public class RaceCarDriver extends person implements Comparable<Raceable> {
         this.winnings = winnings;
         this.wins = wins;
     }
-
     public int compareTo(Raceable r) {
         return Double.compare(this.winnings, r.getWinnings());
-    }
-
-    public int getWinnings() {
-        return winnings;
     }
 
     public double averageWinnings() {
-        return numRaces == 0 ? 0 : winnings / numRaces;
+        return starts == 0 ? 0 : (double) winnings / starts;
     }
-    public int compareTo(Raceable r) {
-        return Double.compare(this.winnings, r.getWinnings());
-    }
+    
+    public int getStarts() {return starts;}
+    public void setStarts(int starts) {this.starts = starts;}
+
+    public int getWins() {return wins;}
+    public void setWins(int wins) {this.wins = wins;}
+
+    public double getWinnings() {return winnings;}
+    public void setWinnings(int winnings) {this.winnings = winnings;}
+
 }
