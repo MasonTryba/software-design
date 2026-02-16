@@ -1,11 +1,11 @@
 package lab4;
 
-public class Person {
+public class person {
     private String name;
     private String country;
     private int yearBorn;
 
-    public Person(String name, String country, int yearBorn) {
+    public person(String name, String country, int yearBorn) {
         this.name = name;
         this.country = country;
         this.yearBorn = yearBorn;
