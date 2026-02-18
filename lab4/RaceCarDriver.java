@@ -12,21 +12,19 @@ public class RaceCarDriver extends Person implements Raceable,Comparable<Raceabl
         this.winnings = winnings;
         this.wins = wins;
     }
+
     public int compareTo(Raceable r) {
         return Double.compare(this.winnings, r.getWinnings());
+    }
+
+    public int getWinnings() {
+        return winnings;
     }
 
     public double averageWinnings() {
         return starts == 0 ? 0 : (double) winnings / starts;
     }
-    
-    public int getStarts() {return starts;}
-    public void setStarts(int starts) {this.starts = starts;}
-
-    public int getWins() {return wins;}
-    public void setWins(int wins) {this.wins = wins;}
-
-    public double getWinnings() {return winnings;}
-    public void setWinnings(int winnings) {this.winnings = winnings;}
-
+    public int compareTo(Raceable r) {
+        return Double.compare(this.winnings, r.getWinnings());
+    }
 }

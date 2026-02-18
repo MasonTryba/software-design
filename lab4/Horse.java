@@ -34,4 +34,13 @@ public class Horse {
 
     public String getBreed() {return breed;}
     public void setBreed(String breed) {this.breed = breed;}
+
+     public String toString() {
+        return "Horse Name: " + name +
+               ", Height: " + height +
+               ", Weight: " + weight +
+               ", Year Born: " + yearBorn +
+               ", Color: " + color +
+               ", Breed: " + breed;
+     }
 }

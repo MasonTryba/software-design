@@ -1,5 +1,7 @@
 package lab4;
 
+import java.util.Arrays;
+
 public class Lab4Driver {
     public static void main(String[] args) {
         Horse sire1 = new Horse(
@@ -37,5 +39,22 @@ public class Lab4Driver {
         );
 
         Raceable[] racers = { raceHorse1, raceHorse2, raceCarDriver1, raceCarDriver2 };
+
+        System.out.println("************ UNSORTED ARRAY ***************");
+
+        for (Raceable r : racers) {
+            System.out.println(r);
+            System.out.println("================");
+        }
+
+        Arrays.sort(racers);
+
+        System.out.println("************ SORTED ARRAY ***************");
+
+        for (Raceable r : racers) {
+            System.out.println(r);
+            System.out.println("Average winnings: " + r.averageWinnings() + " per race run.");
+            System.out.println("================");
+        }
     }
 }
