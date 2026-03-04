@@ -13,10 +13,6 @@ public class RaceCarDriver extends Person implements Raceable,Comparable<Raceabl
         this.wins = wins;
     }
 
-    public int compareTo(Raceable r) {
-        return Double.compare(this.winnings, r.getWinnings());
-    }
-
     public int getWinnings() {
         return winnings;
     }
